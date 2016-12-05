@@ -156,11 +156,11 @@ module Pomo
     def tmux_time(time)
       case time
       when 0
-        "#{time}:00"
+        "\ue001 #{time}:00"
       when 1..5
-        "#[default]#[fg=red]#{time}:00#[default]"
+        "#[default]#[fg=red] \ue003 #{time}:00#[default]"
       when 6..100
-        "#[default]#[fg=green]#{time}:00#[default]"
+        "#[defaut]#[fg=green] \ue003 #{time}:00#[default]"
       end
     end
 

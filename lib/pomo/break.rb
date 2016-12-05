@@ -7,9 +7,9 @@ module Pomo
     def tmux_time(time)
       case time
       when 0
-        "#{time}:00"
+        "\ue001 #{time}:00"
       else
-        "#[default]#[fg=blue]#{time}:00#[default]"
+        "#[default]#[fg=blue] \ue005 #{time}:00#[default]"
       end
     end
 
