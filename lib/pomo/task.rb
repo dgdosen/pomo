@@ -173,7 +173,8 @@ module Pomo
 
     def refresh_tmux_status_bar
       pid = Process.fork do
-        exec "tmux refresh-client -S -t $(tmux list-clients -F '\#{client_tty}')"
+        # exec "tmux refresh-client -S -t $(tmux list-clients -F '\#{client_tty}')"
+        exec "tmux refresh-client"
       end
       Process.detach(pid)
     end
